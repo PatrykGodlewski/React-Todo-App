@@ -2,7 +2,7 @@ import React from "react";
 import TodoText from "./todoText.styled";
 
 export default {
-  title: "todoText",
+  title: "atoms/todoText",
   component: TodoText,
 };
 

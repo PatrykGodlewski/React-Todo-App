@@ -2,7 +2,7 @@ import React from "react";
 import InputBar from "./inputBar";
 
 export default {
-  title: "Input Bar",
+  title: "molecules/Input Bar",
   component: InputBar,
 };
 

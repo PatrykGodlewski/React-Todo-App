@@ -2,7 +2,7 @@ import React from "react";
 import ListItem from "./listItem";
 
 export default {
-  title: "listItem",
+  title: "molecules/listItem",
   component: ListItem,
 };
 

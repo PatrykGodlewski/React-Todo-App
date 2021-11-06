@@ -2,7 +2,7 @@ import React from "react";
 import SelectButton from "./selectButton.styled";
 
 export default {
-  title: "Button",
+  title: "atoms/Button",
   component: SelectButton,
 };
 

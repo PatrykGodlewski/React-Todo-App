@@ -7,6 +7,7 @@ export const theme = {
   DarkGrayishBlue: "hsl(234, 11%, 52%)",
   VeryDarkGrayishBlue: "hsl(233, 14%, 35%)",
   VeryDarkGrayishBlue2: "hsl(237, 14%, 26%)",
+  VeryDarkGrayishBlue3: "hsl(237, 14%, 16%)",
   bold: 700,
   regular: 400,
   barHeight: "80px",

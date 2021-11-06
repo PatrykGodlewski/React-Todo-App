@@ -15,10 +15,21 @@ const ListItemStyled = styled.li`
   ${RemoveButton} {
     height: 30px;
     width: 30px;
+    opacity: 0%;
+
+    @media (max-width: 1024px) {
+      opacity: 100%;
+    }
   }
 
   ${TodoText} {
     justify-self: start;
+  }
+
+  &:hover {
+    ${RemoveButton} {
+      opacity: 100%;
+    }
   }
 
   &::before {
@@ -26,7 +37,7 @@ const ListItemStyled = styled.li`
     height: 1px;
     width: 100%;
     bottom: 0px;
-    background-color: ${({ theme }) => theme.DarkGrayishBlue};
+    background-color: ${({ theme }) => theme.VeryDarkGrayishBlue};
     position: absolute;
   }
 `;

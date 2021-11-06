@@ -2,7 +2,7 @@ import React from "react";
 import TodoList from "./todoList";
 
 export default {
-  title: "todoList",
+  title: "organism/todoList",
   component: TodoList,
 };
 

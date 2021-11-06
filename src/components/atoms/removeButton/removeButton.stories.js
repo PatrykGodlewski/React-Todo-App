@@ -3,7 +3,7 @@ import RemoveButton from "./removeButton.styled";
 import { GlobalStyle } from "../../../theme/globalStyles.styled";
 
 export default {
-  title: "removeButton",
+  title: "atoms/removeButton",
   component: RemoveButton,
 };
 
