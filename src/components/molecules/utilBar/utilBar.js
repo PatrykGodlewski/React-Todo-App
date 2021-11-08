@@ -1,12 +1,14 @@
 import React from "react";
 import UtilBarStyled from "./utilBar.styled";
-import ClearCompleted from "../../atoms/clearCompleted/clearCompleted.styled";
+import TextButton from "../../atoms/textButton/textButton.styled";
 import ItemsLeftText from "../../atoms/itemsLeftText/itemsLeftText";
+import SortBar from "../sortBar/sortBar";
 
 const UtilBar = () => (
   <UtilBarStyled>
     <ItemsLeftText />
-    <ClearCompleted> Clear completed </ClearCompleted>
+    <SortBar />
+    <TextButton> Clear completed </TextButton>
   </UtilBarStyled>
 );
 

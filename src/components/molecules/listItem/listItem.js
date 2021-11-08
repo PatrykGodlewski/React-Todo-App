@@ -5,7 +5,8 @@ import RemoveButton from "../../atoms/removeButton/removeButton.styled";
 import ListItemStyled from "./listItem.styled";
 
 const dummy = {
-  todoText: "Some todo text that will be pulled from localStorage",
+  todoText:
+    "Some todo text that will be pulled from localStorage Some todo text that will be pulled from localStorageSome todo text that will be pulled from localStorage",
 };
 
 const ListItem = () => (

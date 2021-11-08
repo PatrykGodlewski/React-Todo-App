@@ -1,6 +1,6 @@
 import React from "react";
 import TodoListStyled from "./todoList.styled";
-import ListItem from "../molecules/listItem/listItem";
+import ListItem from "../../molecules/listItem/listItem";
 
 const TodoList = () => (
   <TodoListStyled>

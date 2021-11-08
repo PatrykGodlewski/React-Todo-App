@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const InputBarStyled = styled.div`
-  min-height: ${({ theme }) => theme.barHeight};
+  height: 80px;
+  border-radius: 8px;
 
   background-color: ${({ theme }) => theme.VeryDarkGrayishBlue2};
 

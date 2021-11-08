@@ -9,5 +9,10 @@ const TodoInput = styled.input`
   color: ${({ theme }) => theme.LightGrayishBlue};
   caret-color: ${({ theme }) => theme.BrightBlue};
   font-size: 1.8rem;
+
+  &::placeholder {
+    font-weight: ${({ theme }) => theme.bold};
+    color: ${({ theme }) => theme.VeryDarkGrayishBlue};
+  }
 `;
 export default TodoInput;

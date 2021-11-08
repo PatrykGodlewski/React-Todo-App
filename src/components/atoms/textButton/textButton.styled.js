@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const ClearCompleted = styled.button`
+const TextButton = styled.button`
   display: inline-block;
 
-  height: 70%;
+  height: 40px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -18,6 +18,11 @@ const ClearCompleted = styled.button`
     background-color: ${({ theme }) => theme.VeryDarkGrayishBlue};
     color: ${({ theme }) => theme.VeryDarkGrayishBlue2};
   }
+  ${({ active }) =>
+    active &&
+    css`
+      color: ${({ theme }) => theme.BrightBlue};
+    `}
 `;
 
-export default ClearCompleted;
+export default TextButton;
