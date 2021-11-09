@@ -4,7 +4,7 @@ const TodoInput = styled.input`
   outline: none;
   border: none;
   background-color: transparent;
-  height: 80%;
+  height: 45%;
   width: 100%;
   color: ${({ theme }) => theme.LightGrayishBlue};
   caret-color: ${({ theme }) => theme.BrightBlue};

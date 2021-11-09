@@ -24,6 +24,10 @@ const ListItemStyled = styled.li`
     opacity: 0%;
     margin: 0 10px 0 10px;
 
+    &:focus {
+      opacity: 100%;
+    }
+
     @media (max-width: 1024px) {
       opacity: 100%;
     }

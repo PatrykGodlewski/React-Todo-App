@@ -11,6 +11,8 @@ const InputBarStyled = styled.div`
   align-items: center;
 
   grid-template-columns: 1fr 6fr;
+
+  padding-right: 50px;
 `;
 
 export default InputBarStyled;
