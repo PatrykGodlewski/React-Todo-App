@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const TextButton = styled.button`
+const TextButtonStyled = styled.button`
   display: inline-block;
 
   height: 40px;
@@ -25,4 +25,4 @@ const TextButton = styled.button`
     `}
 `;
 
-export default TextButton;
+export default TextButtonStyled;

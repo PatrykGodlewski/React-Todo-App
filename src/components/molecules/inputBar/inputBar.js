@@ -1,45 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import InputBarStyled from "./inputBar.styled";
 import SelectButton from "../../atoms/selectButton/selectButton.styled";
 import TodoInput from "../../atoms/todoInput/todoInput.styled";
 
-const InputBar = () => {
-  const [value, setValue] = useState("");
-  const [todos, setTodo] = useState(() => {
-    const initialValue = JSON.parse(localStorage.getItem("todos"));
-    return initialValue || "";
-  });
-
-  useEffect(() => {
-    if (todos) {
-      localStorage.setItem("todos", JSON.stringify(todos));
-    }
-  }, [todos]);
-
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
-
-  const handleTodo = (e) => {
-    if (e.code === "Enter" || e.code === "NumpadEnter") {
-      if (e.target.value) {
-        setTodo((prevTodos) => [e.target.value, ...prevTodos]);
-        setValue("");
-      }
-    }
-  };
-
+const InputBar = ({ handleInputValue, inputValue, handleSetTodo }) => {
   return (
     <InputBarStyled>
       <SelectButton />
       <TodoInput
-        value={value}
-        onChange={handleChange}
-        onKeyDown={handleTodo}
+        onChange={handleInputValue}
+        value={inputValue}
+        onKeyDown={handleSetTodo}
         placeholder="Create a new todo..."
       />
     </InputBarStyled>
   );
+};
+
+InputBar.defaultProps = { inputValue: "" };
+
+InputBar.propTypes = {
+  inputValue: PropTypes.string,
+  handleInputValue: PropTypes.func.isRequired,
+  handleSetTodo: PropTypes.func.isRequired,
 };
 
 export default InputBar;
