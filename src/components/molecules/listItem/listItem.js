@@ -6,9 +6,9 @@ import RemoveButton from "../../atoms/removeButton/removeButton.styled";
 import ListItemStyled from "./listItem.styled";
 
 const ListItem = ({ text, handleSelect, id, selected, handleDelete }) => (
-  <ListItemStyled id={id}>
+  <ListItemStyled id={id} selected={selected} draggable>
     <SelectButton onClick={handleSelect} selected={selected} />
-    <TodoText> {text} </TodoText>
+    <TodoText selected={selected}> {text} </TodoText>
     <RemoveButton onClick={handleDelete} />
   </ListItemStyled>
 );

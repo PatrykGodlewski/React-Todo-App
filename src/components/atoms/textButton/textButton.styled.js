@@ -11,17 +11,18 @@ const TextButtonStyled = styled.button`
   padding: 1rem;
   border-radius: 8px;
   font-size: 1.8rem;
+  font-family: "Josefin Sans", sans-serif;
 
-  color: ${({ theme }) => theme.VeryDarkGrayishBlue};
+  color: ${({ theme }) => theme.textOOF};
 
   &:hover {
-    background-color: ${({ theme }) => theme.VeryDarkGrayishBlue};
-    color: ${({ theme }) => theme.VeryDarkGrayishBlue2};
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
   }
   ${({ active }) =>
     active &&
     css`
-      color: ${({ theme }) => theme.BrightBlue};
+      color: ${({ theme }) => theme.textFocus};
     `}
 `;
 

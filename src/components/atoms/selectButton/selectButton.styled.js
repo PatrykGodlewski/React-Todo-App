@@ -6,7 +6,7 @@ const SelectButton = styled.button`
   height: 40px;
   background: transparent;
   border-radius: 50%;
-  border: 5px solid ${({ theme }) => theme.VeryDarkGrayishBlue};
+  border: 4px solid ${({ theme }) => theme.detail};
   cursor: pointer;
   ${({ selected }) =>
     selected
@@ -16,7 +16,7 @@ const SelectButton = styled.button`
             width: 40px;
             height: 40px;
             border-radius: 50%; /*1*/
-            border: 5px solid transparent; /*2*/
+            border: 4px solid transparent; /*2*/
             background: linear-gradient(
                 130deg,
                 hsl(192, 100%, 67%) 0%,

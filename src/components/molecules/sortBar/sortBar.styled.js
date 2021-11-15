@@ -12,7 +12,7 @@ const SortBar = styled.div`
 `;
 
 export const SecondSortBarStyled = styled.div`
-  background-color: ${({ theme }) => theme.VeryDarkGrayishBlue2};
+  background-color: ${({ theme }) => theme.primary};
 
   display: flex;
   justify-content: space-evenly;

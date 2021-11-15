@@ -5,6 +5,7 @@ import UtilBar from "../../molecules/utilBar/utilBar";
 import { SecondSortBar } from "../../molecules/sortBar/sortBar";
 import TodoTemplateStyled, { HintText } from "./todoTemplate.styled";
 import Header from "../../molecules/header/header";
+import InviteText from "../../atoms/inviteText/inviteText";
 
 const TodoTemplate = () => {
   // Input controlled component
@@ -14,21 +15,22 @@ const TodoTemplate = () => {
     const initialValue = JSON.parse(localStorage.getItem("todos"));
     return initialValue || [];
   });
-
+  // Filtering initial state
   const [filter, setFilter] = useState("All");
+  // Counter for items lefft
   const [counter, setCounter] = useState(0);
-
+  // useEffect for storing todos in local storage
   useEffect(() => {
     if (todos) {
       localStorage.setItem("todos", JSON.stringify(todos));
       setCounter(() => todos.length);
     }
   }, [todos]);
-
+  // controled input
   const handleInputValue = (e) => {
     setInputValue(e.target.value);
   };
-
+  // handling select button
   const handleSelect = (e) => {
     setTodo((prevTodos) =>
       prevTodos.map((el) => ({
@@ -39,21 +41,22 @@ const TodoTemplate = () => {
       }))
     );
   };
-
+  // handling fitering buttons
   const handleFilter = (e) => {
     setFilter(() => e.target.id);
     setTodo((prev) => prev);
   };
+  // removeing completed items
   const handleCompleted = () => {
     setTodo((prevTodos) => prevTodos.filter((el) => !el.isCompleted));
   };
-
+  // deleting single todo
   const handleDelete = (e) => {
     setTodo((prevTodos) =>
       prevTodos.filter((el) => el.id !== e.target.parentNode.id)
     );
   };
-
+  // setting todo in to state
   const handleSetTodo = (e) => {
     if (e.code === "Enter" || e.code === "NumpadEnter") {
       if (e.target.value) {
@@ -84,14 +87,20 @@ const TodoTemplate = () => {
         handleDelete={handleDelete}
         filter={filter}
       />
-      <UtilBar
-        handleCompleted={handleCompleted}
-        handleFilter={handleFilter}
-        filter={filter}
-        counter={counter}
-      />
-      <SecondSortBar handleFilter={handleFilter} filter={filter} />
-      <HintText>Drag and drop to reorder list</HintText>
+      {todos.length !== 0 ? (
+        <>
+          <UtilBar
+            handleCompleted={handleCompleted}
+            handleFilter={handleFilter}
+            filter={filter}
+            counter={counter}
+          />
+          <SecondSortBar handleFilter={handleFilter} filter={filter} />
+          <HintText>Drag and drop to reorder list</HintText>
+        </>
+      ) : (
+        <InviteText />
+      )}
     </TodoTemplateStyled>
   );
 };

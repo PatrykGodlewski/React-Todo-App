@@ -12,7 +12,7 @@ const UtilBarStyled = styled.div`
   align-items: center;
   white-space: nowrap;
 
-  background-color: ${({ theme }) => theme.VeryDarkGrayishBlue2};
+  background-color: ${({ theme }) => theme.primary};
   border-radius: 0px 0px 8px 8px;
 
   ${SortBar} {

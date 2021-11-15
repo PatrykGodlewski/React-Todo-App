@@ -15,8 +15,19 @@ html {
 }
 body {
     font-size: 1.8rem;
-    background-color: ${({ theme }) => theme.VeryDarkDesaturatedBlue};
+    background-color: ${({ theme }) => theme.background};
+    overflow-x: hidden;
 
+    
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 9px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5 );
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
 
 }
 
