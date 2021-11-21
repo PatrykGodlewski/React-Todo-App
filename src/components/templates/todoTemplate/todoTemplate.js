@@ -41,10 +41,21 @@ const TodoTemplate = () => {
       }))
     );
   };
+
   // handling fitering buttons
   const handleFilter = (e) => {
     setFilter(() => e.target.id);
     setTodo((prev) => prev);
+  };
+  // selecting all todos
+  const handleSelectAll = () => {
+    setTodo((prevTodos) =>
+      prevTodos.map((el) => ({
+        text: el.text,
+        id: el.id,
+        isCompleted: true,
+      }))
+    );
   };
   // removeing completed items
   const handleCompleted = () => {
@@ -80,9 +91,11 @@ const TodoTemplate = () => {
         handleInputValue={handleInputValue}
         inputValue={inputValue}
         handleSetTodo={handleSetTodo}
+        handleSelectAll={handleSelectAll}
       />
       <TodoList
         todos={todos}
+        setTodo={setTodo}
         handleSelect={handleSelect}
         handleDelete={handleDelete}
         filter={filter}

@@ -5,8 +5,15 @@ import TodoText from "../../atoms/todoText/todoText.styled";
 import RemoveButton from "../../atoms/removeButton/removeButton.styled";
 import ListItemStyled from "./listItem.styled";
 
-const ListItem = ({ text, handleSelect, id, selected, handleDelete }) => (
-  <ListItemStyled id={id} selected={selected} draggable>
+const ListItem = ({
+  text,
+  handleSelect,
+  id,
+  selected,
+  handleDelete,
+  style,
+}) => (
+  <ListItemStyled id={id} selected={selected} draggable style={style}>
     <SelectButton onClick={handleSelect} selected={selected} />
     <TodoText selected={selected}> {text} </TodoText>
     <RemoveButton onClick={handleDelete} />
@@ -19,6 +26,7 @@ ListItem.propTypes = {
   handleDelete: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   selected: PropTypes.bool.isRequired,
+  style: PropTypes.string.isRequired,
 };
 
 export default ListItem;

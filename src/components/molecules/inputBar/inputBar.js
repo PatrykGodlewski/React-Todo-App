@@ -4,10 +4,15 @@ import InputBarStyled from "./inputBar.styled";
 import SelectButton from "../../atoms/selectButton/selectButton.styled";
 import TodoInput from "../../atoms/todoInput/todoInput.styled";
 
-const InputBar = ({ handleInputValue, inputValue, handleSetTodo }) => {
+const InputBar = ({
+  handleInputValue,
+  inputValue,
+  handleSetTodo,
+  handleSelectAll,
+}) => {
   return (
     <InputBarStyled>
-      <SelectButton />
+      <SelectButton onClick={handleSelectAll} />
       <TodoInput
         onChange={handleInputValue}
         value={inputValue}
@@ -24,6 +29,7 @@ InputBar.propTypes = {
   inputValue: PropTypes.string,
   handleInputValue: PropTypes.func.isRequired,
   handleSetTodo: PropTypes.func.isRequired,
+  handleSelectAll: PropTypes.func.isRequired,
 };
 
 export default InputBar;
