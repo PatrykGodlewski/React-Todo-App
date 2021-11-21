@@ -1,4 +1,4 @@
-## React todo app from Frontend Mentor
+# React todo app from Frontend Mentor
 
 Made with:
 React,
@@ -6,6 +6,6 @@ Styled Components,
 Storybook,
 SortableJS,
 
-# Links
+### Links
 
 - Live Site URL: [LIVE](https://gallant-shirley-7f9fd7.netlify.app/)
