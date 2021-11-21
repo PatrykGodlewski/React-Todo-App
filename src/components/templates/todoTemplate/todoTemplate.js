@@ -10,6 +10,7 @@ import InviteText from "../../atoms/inviteText/inviteText";
 const TodoTemplate = () => {
   // Input controlled component
   const [inputValue, setInputValue] = useState("");
+  const [selectAll, setSelectAll] = useState(false);
   // Setting todos and reading from localstorage
   const [todos, setTodo] = useState(() => {
     const initialValue = JSON.parse(localStorage.getItem("todos"));
@@ -53,9 +54,10 @@ const TodoTemplate = () => {
       prevTodos.map((el) => ({
         text: el.text,
         id: el.id,
-        isCompleted: true,
+        isCompleted: !selectAll,
       }))
     );
+    setSelectAll((prev) => !prev);
   };
   // removeing completed items
   const handleCompleted = () => {
