@@ -12,8 +12,16 @@ const InputBarStyled = styled.div`
   align-items: center;
 
   grid-template-columns: 1fr 6fr;
+  @media (min-width: 1024px) {
+    gap: 5px;
+    padding-left: 4px;
+  }
 
   padding-right: 50px;
+
+  ${SelectButton} {
+    margin: 0px 10px 0px 10px;
+  }
 
   &:hover {
     ${SelectButton} {

@@ -71,7 +71,7 @@ const TodoTemplate = () => {
   };
   // setting todo in to state
   const handleSetTodo = (e) => {
-    if (e.code === "Enter" || e.code === "NumpadEnter") {
+    if (e.code === "Enter" || e.code === "NumpadEnter" || e.keyCode === 13) {
       if (e.target.value) {
         setTodo((prevTodos) => [
           {
