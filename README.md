@@ -8,4 +8,4 @@ SortableJS,
 
 ### Links
 
-- Live Site URL: [LIVE](https://gallant-shirley-7f9fd7.netlify.app/)
+- Live Site URL: [LIVE](https://react-todo-app-rho-orpin.vercel.app/)
